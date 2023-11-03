@@ -22,3 +22,4 @@ def main_(number_last):
 if __name__ == '__main__':
     for result in main_(5):
         print(result + '\n')
+

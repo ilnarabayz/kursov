@@ -25,4 +25,3 @@ def format_result(data, formatted_date, data_masked_to, data_masked_from=None):
     amount = f"{data['operationAmount']['amount']} {data['operationAmount']['currency']['name']}"
     return f"{description}\n{transaction_info}\n{amount}"
 
-

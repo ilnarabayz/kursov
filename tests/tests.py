@@ -38,6 +38,7 @@ def test_main_2(mocked_data_result, mocked_result_data_to, mocked_data_masked_fr
                     assert results == [mocked_result_data_from] * 5
 
 
+
 def test_get_operation(operations_mocked_data):
     mocked_json_data = json.dumps(operations_mocked_data)
     m = mock_open(read_data=mocked_json_data)
