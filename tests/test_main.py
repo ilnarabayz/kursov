@@ -21,18 +21,18 @@ def test_format_result(mocked_data_to_from, mocked_data_masked_to, mocked_data_m
 
 
 def test_main_1(mocked_data_result, mocked_result_data_to, mocked_data_masked_to):
-    with patch("src.main.get_result_data", return_value=mocked_data_result):
-        with patch("src.main.format_date", return_value="26.08.2019"):
-            with patch("src.main.data_masking", return_value=mocked_data_masked_to):
-                with patch("src.main.format_result", return_value=mocked_result_data_to):
+    with patch("main.get_result_data", return_value=mocked_data_result):
+        with patch("main.format_date", return_value="26.08.2019"):
+            with patch("main.data_masking", return_value=mocked_data_masked_to):
+                with patch("main.format_result", return_value=mocked_result_data_to):
                     results = main(5)
                     assert results == [mocked_result_data_to] * 5
 
 
 def test_main_2(mocked_data_result, mocked_result_data_to, mocked_data_masked_from, mocked_result_data_from):
-    with patch("src.main.get_result_data", return_value=mocked_data_result):
-        with patch("src.main.format_date", return_value="26.08.2019"):
-            with patch("src.main.data_masking", return_value=mocked_data_masked_from):
-                with patch("src.main.format_result", return_value=mocked_result_data_from):
+    with patch("main.get_result_data", return_value=mocked_data_result):
+        with patch("main.format_date", return_value="26.08.2019"):
+            with patch("main.data_masking", return_value=mocked_data_masked_from):
+                with patch("main.format_result", return_value=mocked_result_data_from):
                     results = main(5)
                     assert results == [mocked_result_data_from] * 5
