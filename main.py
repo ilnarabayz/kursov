@@ -4,7 +4,7 @@ from utils import *
 from func import *
 
 
-def main(number_last):
+def main_(number_last):
     """ Программа для вывода 5 последних операций по счету"""
     datas = get_result_data(number_last)
     results = []
@@ -20,5 +20,5 @@ def main(number_last):
 
 
 if __name__ == '__main__':
-    for result in main(5):
+    for result in main_(5):
         print(result + '\n')

@@ -1,5 +1,5 @@
 from unittest.mock import patch, mock_open
-from main import *
+from func import data_masking, format_date, format_result
 from utils import *
 
 
@@ -25,7 +25,7 @@ def test_main_1(mocked_data_result, mocked_result_data_to, mocked_data_masked_to
         with patch("utils.format_date", return_value="26.08.2019"):
             with patch("utils.data_masking", return_value=mocked_data_masked_to):
                 with patch("utils.format_result", return_value=mocked_result_data_to):
-                    results = main(5)
+                    results = main_(5)
                     assert results == [mocked_result_data_to] * 5
 
 
@@ -34,7 +34,7 @@ def test_main_2(mocked_data_result, mocked_result_data_to, mocked_data_masked_fr
         with patch("utils.format_date", return_value="26.08.2019"):
             with patch("utils.data_masking", return_value=mocked_data_masked_from):
                 with patch("utils.format_result", return_value=mocked_result_data_from):
-                    results = main(5)
+                    results = main_(5)
                     assert results == [mocked_result_data_from] * 5
 
 
