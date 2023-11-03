@@ -34,6 +34,7 @@ def get_first_number_last(data, number_last):
     return data[:number_last]
 
 
+
 def get_result_data(number_last):
     """Подготовка data для вывода"""
     get_data = get_operations()
