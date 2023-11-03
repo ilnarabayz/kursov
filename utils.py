@@ -43,4 +43,3 @@ def get_result_data(number_last):
     executed_data = filter_executed(sort_data)
     result_data = get_first_number_last(executed_data, number_last)
     return result_data
-

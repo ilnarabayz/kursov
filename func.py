@@ -24,4 +24,3 @@ def format_result(data, formatted_date, data_masked_to, data_masked_from=None):
     transaction_info = data_masked_from and f"{data_masked_from} -> {data_masked_to}" or data_masked_to
     amount = f"{data['operationAmount']['amount']} {data['operationAmount']['currency']['name']}"
     return f"{description}\n{transaction_info}\n{amount}"
-

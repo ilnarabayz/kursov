@@ -218,7 +218,6 @@ def mocked_result_data_to():
     26.08.2019 Открытие вклада\nСчет 3515 XXXX XXXX 3655\n48223.05 руб.
     """
 
-
 @pytest.fixture
 def mocked_result_data_from():
     return """
